@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ORAI-History</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles/history.css">
+</head>
+<body>
+    <div class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10">
+                    <div class="rounded">
+                        <div class="table-responsive table-borderless">
+                            <table class="table" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"></th>
+                                        <th>User</th>
+                                        <th>Weather</th>
+                                        <th>Lighting</th>
+                                        <th>Roadway Surface</th>
+                                        <th>Roadway Conditions</th>
+                                        <th>Movement Preceding Collision</th>
+                                        <th>Type Of Collision</th>
+                                        <th>Radar Sensor1</th>
+                                        <th>Radar Sensor2</th>
+                                        <th>Radar Sensor3</th>
+                                        <th>Lidar Sensor1</th>
+                                        <th>Lidar Sensor2</th>
+                                        <th>Lidar Sensor3</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body">
+
+                                    <% for(i=0; i<data.length; i++) { %>
+                                        
+                                    <tr class="cell-1" data-toggle="collapse" data-target="#demo">
+                                        <td class="text-center"><%= i+1 %></td>
+                                        <td><%= data[1].Value.user %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].weather %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].lighting %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].roadwaysurface %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].roadwayconditions %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].mpc %></td>
+                                        <td><%= data[1].Value.datas[0].environment[0].toc %></td>
+                                        <td><%= data[1].Value.datas[0].radar[0].sensor1 %></td>
+                                        <td><%= data[1].Value.datas[0].radar[0].sensor2 %></td>
+                                        <td><%= data[1].Value.datas[0].radar[0].sensor3 %></td>
+                                        <td><%= data[1].Value.datas[0].lidar[0].sensor1 %></td>
+                                        <td><%= data[1].Value.datas[0].lidar[0].sensor2 %></td>
+                                        <td><%= data[1].Value.datas[0].lidar[0].sensor3 %></td>
+
+                                        <td><%= data[i].Value.TxID %></td>
+                                        <td><%= data[i].Value.car %></td>
+                                        
+                                                                           
+                                        <td class="table-elipse" data-toggle="collapse" data-target="#demo"><i class="fa fa-ellipsis-h text-black-50"></i></td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

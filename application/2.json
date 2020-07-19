@@ -1,0 +1,21 @@
+{
+  "car": "",
+  "datas": [
+    {
+      "environment": [
+        {
+          "lighting": "daylight",
+          "mpc": "backing",
+          "roadwayconditions": "flooded",
+          "roadwaysurface": "wet",
+          "toc": "rearend",
+          "weather": "raining"
+        }
+      ],
+      "lidar": [{ "sensor1": "4", "sensor2": "5", "sensor3": "data" }],
+      "radar": [{ "sensor1": "1", "sensor2": "2", "sensor3": "3" }]
+    }
+  ],
+  "menufacturer": "",
+  "user": "jiwon@orai.com"
+}

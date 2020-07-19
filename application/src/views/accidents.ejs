@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/navbar') %>
+        <div class="section">
+            <div class="header">
+                <h1>Accidents list</h1>
+                <h2>YALLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~.~</h2>
+
+                <% if(user == undefined){ %>
+                    <div class="text-muted">You need to login :)</div>
+                <% } %>
+            </div>
+
+            <!-- <div class="row">
+                <% if (item !== null){item.forEach((item)=>{ %>
+                <div class="col-lg-4">
+                    <a href="/items/<%= item.itemId %>">
+                        <div class="card">
+                            <div class="card-image"></div>
+                            <div class="card-title"><%= item.name %></div>
+                            <div class="card-comment"><%= item.detail %> </div>
+                        </div>
+                    </a>
+                </div> -->
+                <div class="row">
+                    <% if (accident !== null){accident.forEach((accident)=>{ %>
+                    <div class="col-lg-4">
+                        <a href="/accident/<%= accident.accidentId %>">
+                            <div class="card">
+                                <div class="card-image"></div>
+                                //사고에 이름이 있을 수 있나요? 깔깔,,,, 이거 그래프로 보여주는거 하던지 이런거 정해야 할 것 같아요 ~
+                                <div class="card-title"><%= accident.name %></div>
+                                <div class="card-comment"><%= accident.detail %> </div>
+                            </div>
+                        </a>
+                    </div>
+                <%  })} %>
+            </div>
+        </div>
+    </body>
+</html>
